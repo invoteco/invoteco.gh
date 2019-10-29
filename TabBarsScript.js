@@ -1,6 +1,7 @@
 ﻿
 var isFading = true; //Определяет, должен-ли контент появляться постепенно.
 var n = 7;//Количество вкладок
+var fadeTime = 300;// Время появления контента
 
 function IsCookieEnabled() {
     if (typeof (navigator.cookieEnabled) != "undefined") {
@@ -110,12 +111,12 @@ function setContent(tabbarnumber, tabscount, tabprefix, divprefix) {
         var tab = (document.all) ? document.all(tabprefix + i.toString()) : document.getElementById(tabprefix + i.toString());
         if (tab.className == ("ITab" + tabbarnumber.toString())) {
             var div = (document.all) ? document.all(divprefix + i.toString()) : document.getElementById(divprefix + i.toString());
-            if (isFading) { fade(divprefix + i.toString(), 100, 0, 1200); }
+            if (isFading) { fade(divprefix + i.toString(), 100, 0, fadeTime); }
 
             div.className = "IContent" + tabbarnumber.toString();
         } else {
             var div1 = (document.all) ? document.all(divprefix + i.toString()) : document.getElementById(divprefix + i.toString());
-            if (isFading) { fade(divprefix + i.toString(), 0, 100, 1200); }
+            if (isFading) { fade(divprefix + i.toString(), 0, 100, fadeTime); }
             div1.className = "AContent" + tabbarnumber.toString();
         }
     }
