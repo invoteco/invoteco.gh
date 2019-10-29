@@ -1,0 +1,1642 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+    <title>Invoteco</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="Stylesheet" type="text/css" href="TabsStyles.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="Acc.css" />
+    <link rel="stylesheet" href="Icrsl.css" />
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="jssor.slider.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#accordion").accordion({
+                heightStyle: "content"
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            var slidersCount = 6;//my
+
+            var jssor_options = {
+                $AutoPlay: 0,//1
+                $AutoPlaySteps: 4,//4
+                $SlideDuration: 160,
+                $SlideWidth: 240,//200
+                $SlideSpacing: 3,
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$,
+                    $Steps: 1//5
+                },
+                $BulletNavigatorOptions: {
+                    $Class: $JssorBulletNavigator$
+                }
+            };
+
+            var jssor_0_slider = new $JssorSlider$("jssor_0", jssor_options);
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_options);
+            var jssor_2_slider = new $JssorSlider$("jssor_2", jssor_options);
+            var jssor_3_slider = new $JssorSlider$("jssor_3", jssor_options);
+            var jssor_4_slider = new $JssorSlider$("jssor_4", jssor_options);
+            var jssor_5_slider = new $JssorSlider$("jssor_5", jssor_options);
+
+            /*#region responsive code begin*/
+            var MAX_WIDTH = 980;
+
+            function ScaleSlider() {
+                var containerElement_0 = jssor_0_slider.$Elmt.parentNode;
+                var containerElement_1 = jssor_1_slider.$Elmt.parentNode;//
+                var containerElement_2 = jssor_2_slider.$Elmt.parentNode;//
+                var containerElement_3 = jssor_3_slider.$Elmt.parentNode;//
+                var containerElement_4 = jssor_4_slider.$Elmt.parentNode;//
+                var containerElement_5 = jssor_5_slider.$Elmt.parentNode;//
+
+                var containerWidth_0 = containerElement_0.clientWidth;
+                var containerWidth_1 = containerElement_1.clientWidth;
+                var containerWidth_2 = containerElement_2.clientWidth;
+                var containerWidth_3 = containerElement_3.clientWidth;
+                var containerWidth_4 = containerElement_4.clientWidth;
+                var containerWidth_5 = containerElement_5.clientWidth;
+
+                if (containerWidth_0) {
+                    var expectedWidth_0 = Math.min(MAX_WIDTH || containerWidth_0, containerWidth_0);
+                    jssor_0_slider.$ScaleWidth(expectedWidth_0);
+                }
+
+                if (containerWidth_1) {
+                    var expectedWidth_1 = Math.min(MAX_WIDTH || containerWidth_1, containerWidth_1);
+                    jssor_1_slider.$ScaleWidth(expectedWidth_1);
+                }
+
+                if (containerWidth_2) {
+                    var expectedWidth_2 = Math.min(MAX_WIDTH || containerWidth_2, containerWidth_2);
+                    jssor_2_slider.$ScaleWidth(expectedWidth_2);
+                }
+                if (containerWidth_3) {
+                    var expectedWidth_3 = Math.min(MAX_WIDTH || containerWidth_3, containerWidth_3);
+                    jssor_3_slider.$ScaleWidth(expectedWidth_3);
+                }
+
+                if (containerWidth_4) {
+                    var expectedWidth_4 = Math.min(MAX_WIDTH || containerWidth_4, containerWidth_4);
+                    jssor_4_slider.$ScaleWidth(expectedWidth_4);
+                }
+                if (containerWidth_5) {
+                    var expectedWidth_5 = Math.min(MAX_WIDTH || containerWidth_5, containerWidth_5);
+                    jssor_5_slider.$ScaleWidth(expectedWidth_5);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        });
+    </script>
+    <style>
+        a.rollover_fb {
+            background: url(btn_fb_39x39_grey_n.png); /* рисунок, который увидим сразу  */
+            display: block; /*  Рисунок как блочный элемент */
+            width: 39px; /* Ширина рисунка */
+            height: 39px; /*  Высота рисунка */
+        }
+
+            a.rollover_fb:hover {
+                background: url(btn_fb_39x39_n.png); /* заменяемый рисунок при наведении мыши  */
+            }
+
+        a.rollover_tw {
+            background: url(btn_tw_39x39_grey_n.png); /* рисунок, который увидим сразу  */
+            display: block; /*  Рисунок как блочный элемент */
+            width: 39px; /* Ширина рисунка */
+            height: 39px; /*  Высота рисунка */
+        }
+
+            a.rollover_tw:hover {
+                background: url(btn_tw_39x39_n.png); /* заменяемый рисунок при наведении мыши  */
+            }
+
+        a.rollover_in {
+            background: url(btn_in_39x39_grey_n.png); /* рисунок, который увидим сразу  */
+            display: block; /*  Рисунок как блочный элемент */
+            width: 39px; /* Ширина рисунка */
+            height: 39px; /*  Высота рисунка */
+        }
+
+            a.rollover_in:hover {
+                background: url(btn_in_39x39_n.png); /* заменяемый рисунок при наведении мыши  */
+            }
+    </style>
+
+</head>
+
+<!-- Нужно столько вызовов, сколькsо tabbar-ов на странице (для каждого свои параметры)-->
+<body onload="restoreState('1', 7, 'tabBar1_tab', 'tabBar1_contDiv', 'MyCookieForTabBar1')">
+    <script type="text/javascript" src="TabBarsScript.js"></script>
+
+    <div id="maindiv" class="maindiv">
+        <div id="tabBar1" class="tabBar1">
+            <div id="tabsDiv" class="tabsDiv1">
+                <!-- ================================================================================================ -->
+                <div id="tabBar1_leftIndent" class="LeftIndent1"></div>
+                <div id="tabBar1_tab0" class="ITab1"
+                    onclick="changeState('1', 7, this.id, 'tabBar1_tab', 'tabBar1_contDiv'),
+                         setCookie('MyCookieForTabBar1', this.id)">
+                    <p id="text1_tab0">Профиль</p>
+                </div>
+                <!-- ================================================================================================ -->
+                <div id="tabBar1_d0_1" class="TabDelimiter"></div>
+                <div id="tabBar1_tab1" class="ITab1"
+                    onclick="changeState('1', 7, this.id, 'tabBar1_tab', 'tabBar1_contDiv'),
+                             setCookie('MyCookieForTabBar1', this.id)">
+                    <p id="text1_tab1">Резюме</p>
+                </div>
+                <!-- ================================================================================================ -->
+                <div id="tabBar1_d1_2" class="TabDelimiter"></div>
+                <div id="tabBar1_tab2" class="ITab1"
+                    onclick="changeState('1', 7, this.id, 'tabBar1_tab', 'tabBar1_contDiv'),
+                          setCookie('MyCookieForTabBar1', this.id)">
+                    <p id="text1_tab2">Портфолио</p>
+                </div>
+                <!-- ================================================================================================ -->
+                <div id="tabBar1_d2_3" class="TabDelimiter"></div>
+                <div id="tabBar1_tab3" class="ITab1"
+                    onclick="changeState('1', 7, this.id, 'tabBar1_tab', 'tabBar1_contDiv'),
+                          setCookie('MyCookieForTabBar1', this.id)">
+                    <p id="text1_tab3">Блог</p>
+                </div>
+                <!-- ================================================================================================ -->
+                <div id="tabBar1_d1_4" class="TabDelimiter"></div>
+                <div id="tabBar1_tab4" class="ITab1"
+                    onclick="changeState('1', 7, this.id, 'tabBar1_tab', 'tabBar1_contDiv'),
+                                 setCookie('MyCookieForTabBar1', this.id)">
+                    <p id="P1">Статьи</p>
+                </div>
+                <!-- ================================================================================================ -->
+                <div id="tabBar1_d1_5" class="TabDelimiter"></div>
+                <div id="tabBar1_tab5" class="ITab1"
+                    onclick="changeState('1', 7, this.id, 'tabBar1_tab', 'tabBar1_contDiv'),
+                                 setCookie('MyCookieForTabBar1', this.id)">
+                    <p id="P3">Форум</p>
+                </div>
+                <!-- ================================================================================================ -->
+                <div id="tabBar1_d1_6" class="TabDelimiter"></div>
+                <div id="tabBar1_tab6" class="ITab1"
+                    onclick="changeState('1', 7, this.id, 'tabBar1_tab', 'tabBar1_contDiv'),
+                                 setCookie('MyCookieForTabBar1', this.id)">
+                    <p id="P4">Контакты</p>
+                </div>
+                <!-- ================================================================================================ -->
+                <div id="tabBar1_rightIndent" class="RightIndent1"></div>
+            </div>
+
+            <div id="contentDiv_1" class="contentfield effect2">
+                <div id="tabBar1_contDiv0" class="AContent">
+                    <div id="FotoNameWelcomediv" class="FotoNameWelcomediv">
+                        <div id="fotodiv" class="fotodiv">
+                            <img alt="img1" src="Foto.jpg" />
+                        </div>
+                        <div id="NameWelcomeDiv">
+                            <div id="namediv" class="namediv">
+                                <p class="nametext">Разработчик</p>
+                            </div>
+                            <div id="welcomediv" class="welcomediv">
+                                <p class="welcometext">Добро пожаловать! Благодарю за визит!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="InformationTesisdiv" class="InformationTesisdiv">
+                        <div id="informationdiv" class="informationdiv">
+                            <p>&nbsp; &nbsp;&nbsp;&nbsp;Информация</p>
+                            <ul class="hr">
+                                <li>Возраст:</li>
+                                <li>49 лет</li>
+                            </ul>
+                            <ul class="hr">
+                                <li>Расположение:</li>
+                                <li>г.Москва</li>
+                            </ul>
+                            <ul class="hr">
+                                <li>Тел:</li>
+                                <li>(+7) 9*********</li>
+                            </ul>
+                            <ul class="hr">
+                                <li>Email:</li>
+                                <li>pas@invoteco.ru</li>
+                            </ul>
+                            <div id="downloadButton" class="downloadButton">
+                                <a href="Files/Resume.docx" target="_blank">
+                                    <p id="downloadButtonText" class="downloadButtonText">Download Resume</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="Tesisdiv" class="Tesisdiv">
+                            <div id="TextDiv">
+
+                                <p class="ThesisText">В детстве родители никогда не заставляли меня учиться, а тем более, приносить из школы дневник с одними лишь "пятерками".</p>
+                                <p class="ThesisText">
+                                    Взамен они мне доходчиво объяснили, что каким бы богатым ты не был, в каком бы дворце ты не жил, и какие бы деликатесы не кушал - все равно, единственное, что действительно твое,
+                                    то, что у тебя никто не сможет отобрать, то, что нельзя потерять и что составляет основу твоего достоинства - это то, что ты знаешь и что умеешь.
+                                </p>
+                                <p class="ThesisText">Этого оказалось достаточно для того, чтобы всю оставшуюся жизнь я все делал сам, без кнута и даже без пряника, и, явилось направляющим вектором для движения вперед.</p>
+                                <p class="ThesisText">Выбор направлений, в которых я работаю, обусловлен следующим:</p>
+                                <ul>
+                                    <li>Это интересно;</li>
+                                    <li>Это приносит пользу окружающим; </li>
+                                    <li>Это приносит пользу мне;</li>
+                                    <li>Это позволяет накапливать знания и умения в виде опыта.</li>
+                                </ul>
+                                <p class="ThesisText">О выборе профессии я ни разу не пожалел.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="footerDiv" class="footerDiv">
+                        <p class="footertext">Developed By Invoteco</p>
+                    </div>
+                </div>
+                <div id="tabBar1_contDiv1" class="IContent1">
+                    <div class="ScrolledDiv">
+                        <div id="accordion">
+                            <h3>Должности, на которые претендую:</h3>
+                            <div id="fvf">
+                                <ul>
+                                    <li>Инженер-конструктор. Ожидаемый уровень заработной платы: 90 000 руб.</li>
+                                    <li>Начальник конструкторского бюро. Ожидаемый уровень заработной платы: 120 000 руб.</li>
+                                    <li>Главный конструктор. Ожидаемый уровень заработной платы: 140 000 руб.</li>
+                                </ul>
+                            </div>
+                            <h3>Области интересов:</h3>
+                            <div id="ujyuj">
+                                <ul>
+                                    <li>Общее машиностроение (разработка нестандартного оборудования);</li>
+                                    <li>Разработка оборудования для переработки полимеров (узлы и детали термопластавтоматов, экструдеров, транспортировочно-дозирующих систем);</li>
+                                    <li>Разработка оснастки для переработки полимеров (литьевые формы, экструзионные комплекты, вакуум-формы, формы для заливки ППУ);</li>
+                                    <li>Металлообработка (гибка, профилирование, резание, штамповка); </li>
+                                    <li>Разработка оснастки для моллирования стекла; </li>
+                                    <li>Химическая технология (органический синтез);</li>
+                                    <li>Малое судостроение (разработка корпусов, движителей, вспомогательного оборудования);</li>
+                                </ul>
+                            </div>
+                            <h3>Возможная занятость:</h3>
+                            <div id="nfhn">
+                                <ul>
+                                    <li>Полная занятость;</li>
+                                    <li>Частичная занятость;</li>
+                                    <li>Проектная работа (по договору подряда);</li>
+                                    <li>Удаленная работа (по договору подряда);</li>
+                                </ul>
+                            </div>
+                            <h3>Образование:</h3>
+                            <div id="uyjtndgb">
+                                <ul>
+                                    <li>Профессиональное. СГПТУ№4, г.Мурманск. Электрогазосварщик;</li>
+                                    <li>Высшее. Казанский Государственный технологический университет. Инженер-технолог;</li>
+                                </ul>
+                            </div>
+                            <h3>Навыки:</h3>
+                            <div id="SkillsDiv">
+                                <ul>
+                                    <li>CAD/CAM/CAE: NX, SW, AutoCAD, ANSYS;</li>
+                                    <li>Офис: MS Project, MS Word, MS Excel, MS Visio; </li>
+                                    <li>Программирование: Visual Studio. </li>
+                                    <li>Разработка NC-программ. </li>
+                                </ul>
+                            </div>
+                            <h3>Опыт работы: 20 лет</h3>
+                            <div id="Div1" class="ScrolledDiv">
+                                <ul>
+                                    <li>
+                                        <h4>ООО Терна полимер (ООО Пластресурс).  Мытищи <a href="http://www.fineber.ru">(www.fineber.ru)</a>.  Ведущий инженер-конструктор</h4>
+                                    </li>
+                                </ul>
+                                <h5>Январь 2014 — по настоящее время. 4 года 11 мес.</h5>
+                                <p>Разработка экструзионной оснастки, форм для литья по давлением, деталей оборудования, изделий.</p>
+                                <hr />
+                                <ul>
+                                    <li>
+                                        <h4>ЗАО АРИАДА.  Волжск <a href="http://www.ariada.ru/">(www.ariada.ru)</a>.  Ведущий инженер-конструктор</h4>
+                                    </li>
+                                </ul>
+                                <h5>Сентябрь 2007 — Январь 2014. 6 лет 5 мес.</h5>
+                                <p>
+                                    Разработка технологической оснастки (фильеры для экструзии, литьевые формы для литья под давлением, вакуумные формы, заливочные формы для запенивания ППУ,
+                                    формы для моллирования (гибки) стекла).
+                                </p>
+                                <p>Разработка пластмассовых деталей для комплектации продукции предприятия.</p>
+                                <p>Разработка нестандартного оборудования и ремонтной документации для сопровождения покупного (импортного) оборудования.</p>
+                                <p>
+                                    Разработана оснастка более чем на 200 единиц (на август 2012 г.) деталей и изделий.
+                                    Из них 55 литьевых форм,65 комплектов экструзионной оснастки (фильеры, калибраторы, ванны охлаждения и траки тянущих устройств),
+                                    8 форм для моллирования стекла, 6 ед. оборудования (станок для продольной резки сэндвич-панелей, станок для резки вспененного полиэтилена,
+                                    установки для вспомогательных технологических операций), остальное - оргоснастка и контрольно-мерительный инструмент. Разработанная оснастка изготовлена и внедрена.
+                                </p>
+                                <p>
+                                    Кроме этого разработаны несколько архитектурно-строительных (не несущих) конструкций.
+                                    Разработаны 18 пластмассовых деталей (литьевые и профильные (экструзионные)).
+                                </p>
+
+                                <hr />
+                                <ul>
+                                    <li>
+                                        <h4>ФГУП ПО "Завод им.Серго".  Зеленодольск <a href="http://www.pozis.ru/">(www.pozis.ru)</a>.  Начальник конструкторско-технологического бюро полимеров</h4>
+                                    </li>
+                                </ul>
+                                <h5>Сентябрь 2002 — Сентябрь 2007. 5 лет 1 мес.</h5>
+                                <p>
+                                    - Руководство коллективом конструкторско-технологического бюро (численность в разное время от 8 до 18 человек), осуществляющего полный цикл подготовки производства
+                                    (разработку и внедрение средств технологического оснащения и технологических процессов изготовления деталей из полимеров).
+                                </p>
+                                <p>- Выполнение анализа конструкций полимерных деталей, которые планировалось выпускать, на технологичность, решение вопросов по доведению конструкции деталей с разработчиками КД на детали.</p>
+                                <p>- Оценка сложности деталей, сроков их внедрения в производство, составление плана выполнения работ по внедрению.</p>
+                                <p>- Распределение работ по разработке КД на оснастку между конструкторами в соответствии с их специализацией и уровнем.</p>
+                                <p>- Контроль качества, сроков выполнения работ по разработке КД на оснастку. Проверка разработанной КД в соответствии с ЕСКД, технологическими возможностями инструментального производства.</p>
+                                <p>
+                                    - Руководство разработкой технологических процессов на производство деталей и узлов из полимеров. Разработка планировочных решений, подбор и составление заявок на приобретение оборудования.
+                                    Участие в переговорах по приобретению оборудования с поставщиками.
+                                </p>
+                                <p>Разработаны и внедрены в производство детали, оснастка и технологии производства современной бытовой техники 18 моделей.</p>
+                                <hr />
+                                <ul>
+                                    <li>
+                                        <h4>ГУП "Буинский спиртзавод".  Буинск.  Ведущий инженер-технолог</h4>
+                                    </li>
+                                </ul>
+                                <h5>Январь 2001 — Сентябрь 2002. 1 год 9 мес.</h5>
+                                <p>
+                                    Участие в строительстве предприятия. Курирование монтажа, испытаний, пуска в производство технологического оборудования. Разработка технических заданий на изготовление оборудования, контроль выполнения.
+                                </p>
+                                <hr />
+                                <ul>
+                                    <li>
+                                        <h4>ООО "Башкирские агротехнологии".  Благовещенск (Респ.Башкортостан.  Помощник ген.директора-нач. ОТК</h4>
+                                    </li>
+                                </ul>
+                                <h5>Январь 2000 —  Январь 2001. 1 год 1 мес.</h5>
+                                <p>
+                                    Организация системы контроля качества продукции на предприятии. Руководство отделом технического контроля.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="DownResumeBtn" class="downloadButton2">
+                        <a href="Files/Resume.docx" target="_blank">
+                            <p id="P2" class="downloadButtonText">Download Resume</p>
+                        </a>
+                    </div>
+                </div>
+                <div id="tabBar1_contDiv2" class="IContent1">
+                    <div id="portfolioDiv" class="PortDiv">
+                        <div class="type_headerdiv">
+                            <h3>Изделия, производимые методом ротоформовки</h3>
+                        </div>
+                        <div id="jssor_0" class="icrsl_320">
+                            <!-- Loading Screen -->
+                            <div data-u="loading" class="jssorl-009-spin loading">
+                                <img class="imgloading" src="spin.svg" />
+                            </div>
+                            <div data-u="slides" class="imgrow">
+                                <div>
+                                    <img data-u="image" src="end_section.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Секция концевая</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a href="End_section.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="I_section.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">I-cекция</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="I_section.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="T_section.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Т-секция</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="T-section.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="L_section.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">L-секция</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="L-section.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="TS-tank.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Емкость наборная</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="TS_tank.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="L-base.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">База лотковая</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="P_base.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">База плоская</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="S_base.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">База сферическая</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="C_base.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">База кабельная</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="Cone.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Конус</p>
+                                    </div>
+
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="Shaft_1000.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Шахта</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="C_Shaft_1000.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Шахта кабельная</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="K_well.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Колодец канализационный</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="C_well.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Колодец кабельный</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="P_well.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Колодец универсальный</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="S_well.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Колодец дождеприемный</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Bullet Navigator -->
+                            <div data-u="navigator" class="jssorb057 bnavigator" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                                <div data-u="prototype" class="i prototype">
+                                    <svg viewBox="0 0 16000 16000" class="svg_viewBox">
+                                        <circle class="b" cx="8000" cy="8000" r="5000"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- Arrow Navigator -->
+                            <div data-u="arrowleft" class="jssora073 arrowleft" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                                <svg viewBox="0 0 16000 16000" class="svg_viewBox">
+                                    <path class="a" d="M4037.7,8357.3l5891.8,5891.8c100.6,100.6,219.7,150.9,357.3,150.9s256.7-50.3,357.3-150.9 l1318.1-1318.1c100.6-100.6,150.9-219.7,150.9-357.3c0-137.6-50.3-256.7-150.9-357.3L7745.9,8000l4216.4-4216.4 c100.6-100.6,150.9-219.7,150.9-357.3c0-137.6-50.3-256.7-150.9-357.3l-1318.1-1318.1c-100.6-100.6-219.7-150.9-357.3-150.9 s-256.7,50.3-357.3,150.9L4037.7,7642.7c-100.6,100.6-150.9,219.7-150.9,357.3C3886.8,8137.6,3937.1,8256.7,4037.7,8357.3 L4037.7,8357.3z"></path>
+                                </svg>
+                            </div>
+                            <div data-u="arrowright" class="jssora073 arrowright" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                                <svg viewBox="0 0 16000 16000" class="svg_viewBox">
+                                    <path class="a" d="M11962.3,8357.3l-5891.8,5891.8c-100.6,100.6-219.7,150.9-357.3,150.9s-256.7-50.3-357.3-150.9 L4037.7,12931c-100.6-100.6-150.9-219.7-150.9-357.3c0-137.6,50.3-256.7,150.9-357.3L8254.1,8000L4037.7,3783.6 c-100.6-100.6-150.9-219.7-150.9-357.3c0-137.6,50.3-256.7,150.9-357.3l1318.1-1318.1c100.6-100.6,219.7-150.9,357.3-150.9 s256.7,50.3,357.3,150.9l5891.8,5891.8c100.6,100.6,150.9,219.7,150.9,357.3C12113.2,8137.6,12062.9,8256.7,11962.3,8357.3 L11962.3,8357.3z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="type_headerdiv">
+                            <h3>Судостроение</h3>
+                        </div>
+                        <div id="jssor_1" class="icrsl_320">
+                            <!-- Loading Screen -->
+                            <div data-u="loading" class="jssorl-009-spin loading">
+                                <img class="imgloading" src="spin.svg" />
+                            </div>
+                            <div data-u="slides" class="imgrow">
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="001.jpg" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Bullet Navigator -->
+                            <div data-u="navigator" class="jssorb057 bnavigator" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                                <div data-u="prototype" class="i prototype">
+                                    <svg viewBox="0 0 16000 16000" class="svg_viewBox">
+                                        <circle class="b" cx="8000" cy="8000" r="5000"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- Arrow Navigator -->
+                            <div data-u="arrowleft" class="jssora073 arrowleft" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                                <svg viewBox="0 0 16000 16000" class="svg_viewBox">
+                                    <path class="a" d="M4037.7,8357.3l5891.8,5891.8c100.6,100.6,219.7,150.9,357.3,150.9s256.7-50.3,357.3-150.9 l1318.1-1318.1c100.6-100.6,150.9-219.7,150.9-357.3c0-137.6-50.3-256.7-150.9-357.3L7745.9,8000l4216.4-4216.4 c100.6-100.6,150.9-219.7,150.9-357.3c0-137.6-50.3-256.7-150.9-357.3l-1318.1-1318.1c-100.6-100.6-219.7-150.9-357.3-150.9 s-256.7,50.3-357.3,150.9L4037.7,7642.7c-100.6,100.6-150.9,219.7-150.9,357.3C3886.8,8137.6,3937.1,8256.7,4037.7,8357.3 L4037.7,8357.3z"></path>
+                                </svg>
+                            </div>
+                            <div data-u="arrowright" class="jssora073 arrowright" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                                <svg viewBox="0 0 16000 16000" class="svg_viewBox">
+                                    <path class="a" d="M11962.3,8357.3l-5891.8,5891.8c-100.6,100.6-219.7,150.9-357.3,150.9s-256.7-50.3-357.3-150.9 L4037.7,12931c-100.6-100.6-150.9-219.7-150.9-357.3c0-137.6,50.3-256.7,150.9-357.3L8254.1,8000L4037.7,3783.6 c-100.6-100.6-150.9-219.7-150.9-357.3c0-137.6,50.3-256.7,150.9-357.3l1318.1-1318.1c100.6-100.6,219.7-150.9,357.3-150.9 s256.7,50.3,357.3,150.9l5891.8,5891.8c100.6,100.6,150.9,219.7,150.9,357.3C12113.2,8137.6,12062.9,8256.7,11962.3,8357.3 L11962.3,8357.3z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="type_headerdiv">
+                            <h3>Изделия, производимые методом литья под давлением</h3>
+                        </div>
+                        <div id="jssor_2" class="icrsl_320">
+                            <!-- Loading Screen -->
+                            <div data-u="loading" class="jssorl-009-spin loading">
+                                <img class="imgloading" src="spin.svg" />
+                            </div>
+                            <div data-u="slides" class="imgrow">
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Bullet Navigator -->
+                            <div data-u="navigator" class="jssorb057 bnavigator" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                                <div data-u="prototype" class="i prototype">
+                                    <svg viewBox="0 0 16000 16000" class="svg_viewBox">
+                                        <circle class="b" cx="8000" cy="8000" r="5000"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- Arrow Navigator -->
+                            <div data-u="arrowleft" class="jssora073 arrowleft" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                                <svg viewBox="0 0 16000 16000" class="svg_viewBox">
+                                    <path class="a" d="M4037.7,8357.3l5891.8,5891.8c100.6,100.6,219.7,150.9,357.3,150.9s256.7-50.3,357.3-150.9 l1318.1-1318.1c100.6-100.6,150.9-219.7,150.9-357.3c0-137.6-50.3-256.7-150.9-357.3L7745.9,8000l4216.4-4216.4 c100.6-100.6,150.9-219.7,150.9-357.3c0-137.6-50.3-256.7-150.9-357.3l-1318.1-1318.1c-100.6-100.6-219.7-150.9-357.3-150.9 s-256.7,50.3-357.3,150.9L4037.7,7642.7c-100.6,100.6-150.9,219.7-150.9,357.3C3886.8,8137.6,3937.1,8256.7,4037.7,8357.3 L4037.7,8357.3z"></path>
+                                </svg>
+                            </div>
+                            <div data-u="arrowright" class="jssora073 arrowright" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                                <svg viewBox="0 0 16000 16000" class="svg_viewBox">
+                                    <path class="a" d="M11962.3,8357.3l-5891.8,5891.8c-100.6,100.6-219.7,150.9-357.3,150.9s-256.7-50.3-357.3-150.9 L4037.7,12931c-100.6-100.6-150.9-219.7-150.9-357.3c0-137.6,50.3-256.7,150.9-357.3L8254.1,8000L4037.7,3783.6 c-100.6-100.6-150.9-219.7-150.9-357.3c0-137.6,50.3-256.7,150.9-357.3l1318.1-1318.1c100.6-100.6,219.7-150.9,357.3-150.9 s256.7,50.3,357.3,150.9l5891.8,5891.8c100.6,100.6,150.9,219.7,150.9,357.3C12113.2,8137.6,12062.9,8256.7,11962.3,8357.3 L11962.3,8357.3z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="type_headerdiv">
+                            <h3>Изделия, производимые методом экструзии</h3>
+                        </div>
+                        <div id="jssor_3" class="icrsl_320">
+                            <!-- Loading Screen -->
+                            <div data-u="loading" class="jssorl-009-spin loading">
+                                <img class="imgloading" src="spin.svg" />
+                            </div>
+                            <div data-u="slides" class="imgrow">
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Bullet Navigator -->
+                            <div data-u="navigator" class="jssorb057 bnavigator" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                                <div data-u="prototype" class="i prototype">
+                                    <svg viewBox="0 0 16000 16000" class="svg_viewBox">
+                                        <circle class="b" cx="8000" cy="8000" r="5000"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- Arrow Navigator -->
+                            <div data-u="arrowleft" class="jssora073 arrowleft" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                                <svg viewBox="0 0 16000 16000" class="svg_viewBox">
+                                    <path class="a" d="M4037.7,8357.3l5891.8,5891.8c100.6,100.6,219.7,150.9,357.3,150.9s256.7-50.3,357.3-150.9 l1318.1-1318.1c100.6-100.6,150.9-219.7,150.9-357.3c0-137.6-50.3-256.7-150.9-357.3L7745.9,8000l4216.4-4216.4 c100.6-100.6,150.9-219.7,150.9-357.3c0-137.6-50.3-256.7-150.9-357.3l-1318.1-1318.1c-100.6-100.6-219.7-150.9-357.3-150.9 s-256.7,50.3-357.3,150.9L4037.7,7642.7c-100.6,100.6-150.9,219.7-150.9,357.3C3886.8,8137.6,3937.1,8256.7,4037.7,8357.3 L4037.7,8357.3z"></path>
+                                </svg>
+                            </div>
+                            <div data-u="arrowright" class="jssora073 arrowright" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                                <svg viewBox="0 0 16000 16000" class="svg_viewBox">
+                                    <path class="a" d="M11962.3,8357.3l-5891.8,5891.8c-100.6,100.6-219.7,150.9-357.3,150.9s-256.7-50.3-357.3-150.9 L4037.7,12931c-100.6-100.6-150.9-219.7-150.9-357.3c0-137.6,50.3-256.7,150.9-357.3L8254.1,8000L4037.7,3783.6 c-100.6-100.6-150.9-219.7-150.9-357.3c0-137.6,50.3-256.7,150.9-357.3l1318.1-1318.1c100.6-100.6,219.7-150.9,357.3-150.9 s256.7,50.3,357.3,150.9l5891.8,5891.8c100.6,100.6,150.9,219.7,150.9,357.3C12113.2,8137.6,12062.9,8256.7,11962.3,8357.3 L11962.3,8357.3z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="type_headerdiv">
+                            <h3>Изделия, производимые методом мех.обработки</h3>
+                        </div>
+                        <div id="jssor_4" class="icrsl_320">
+                            <!-- Loading Screen -->
+                            <div data-u="loading" class="jssorl-009-spin ui-tabs-loading">
+                                <img class="imgloading" src="spin.svg" />
+                            </div>
+                            <div data-u="slides" class="imgrow">
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Bullet Navigator -->
+                            <div data-u="navigator" class="jssorb057 bnavigator" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                                <div data-u="prototype" class="i prototype">
+                                    <svg viewBox="0 0 16000 16000" class="svg_viewBox">
+                                        <circle class="b" cx="8000" cy="8000" r="5000"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- Arrow Navigator -->
+                            <div data-u="arrowleft" class="jssora073 arrowleft" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                                <svg viewBox="0 0 16000 16000" class="svg_viewBox">
+                                    <path class="a" d="M4037.7,8357.3l5891.8,5891.8c100.6,100.6,219.7,150.9,357.3,150.9s256.7-50.3,357.3-150.9 l1318.1-1318.1c100.6-100.6,150.9-219.7,150.9-357.3c0-137.6-50.3-256.7-150.9-357.3L7745.9,8000l4216.4-4216.4 c100.6-100.6,150.9-219.7,150.9-357.3c0-137.6-50.3-256.7-150.9-357.3l-1318.1-1318.1c-100.6-100.6-219.7-150.9-357.3-150.9 s-256.7,50.3-357.3,150.9L4037.7,7642.7c-100.6,100.6-150.9,219.7-150.9,357.3C3886.8,8137.6,3937.1,8256.7,4037.7,8357.3 L4037.7,8357.3z"></path>
+                                </svg>
+                            </div>
+                            <div data-u="arrowright" class="jssora073 arrowright" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                                <svg viewBox="0 0 16000 16000" class="svg_viewBox">
+                                    <path class="a" d="M11962.3,8357.3l-5891.8,5891.8c-100.6,100.6-219.7,150.9-357.3,150.9s-256.7-50.3-357.3-150.9 L4037.7,12931c-100.6-100.6-150.9-219.7-150.9-357.3c0-137.6,50.3-256.7,150.9-357.3L8254.1,8000L4037.7,3783.6 c-100.6-100.6-150.9-219.7-150.9-357.3c0-137.6,50.3-256.7,150.9-357.3l1318.1-1318.1c100.6-100.6,219.7-150.9,357.3-150.9 s256.7,50.3,357.3,150.9l5891.8,5891.8c100.6,100.6,150.9,219.7,150.9,357.3C12113.2,8137.6,12062.9,8256.7,11962.3,8357.3 L11962.3,8357.3z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="type_headerdiv">
+                            <h3>Изделия, производимые методом линейной формовки</h3>
+                        </div>
+                        <div id="jssor_5" class="icrsl_320">
+                            <!-- Loading Screen -->
+                            <div data-u="loading" class="jssorl-009-spin loading">
+                                <img class="imgloading" src="spin.svg" />
+                            </div>
+                            <div data-u="slides" class="imgrow">
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="001.jpg" />
+                                    <div class="imgdata">
+                                        <p class="downloadButtonText">Наименование разработки/детали/изделия</p>
+                                    </div>
+                                    <div class="readmore">
+                                        <a style="color: #666;" href="59.30.30.html" target="_blank">
+                                            <p class="downloadButtonText">Подробнее</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Bullet Navigator -->
+                            <div data-u="navigator" class="jssorb057 bnavigator" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+                                <div data-u="prototype" class="i prototype">
+                                    <svg viewBox="0 0 16000 16000" class="svg_viewBox">
+                                        <circle class="b" cx="8000" cy="8000" r="5000"></circle>
+                                    </svg>
+                                </div>
+                            </div>
+                            <!-- Arrow Navigator -->
+                            <div data-u="arrowleft" class="jssora073 arrowleft" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+                                <svg viewBox="0 0 16000 16000" class="svg_viewBox">
+                                    <path class="a" d="M4037.7,8357.3l5891.8,5891.8c100.6,100.6,219.7,150.9,357.3,150.9s256.7-50.3,357.3-150.9 l1318.1-1318.1c100.6-100.6,150.9-219.7,150.9-357.3c0-137.6-50.3-256.7-150.9-357.3L7745.9,8000l4216.4-4216.4 c100.6-100.6,150.9-219.7,150.9-357.3c0-137.6-50.3-256.7-150.9-357.3l-1318.1-1318.1c-100.6-100.6-219.7-150.9-357.3-150.9 s-256.7,50.3-357.3,150.9L4037.7,7642.7c-100.6,100.6-150.9,219.7-150.9,357.3C3886.8,8137.6,3937.1,8256.7,4037.7,8357.3 L4037.7,8357.3z"></path>
+                                </svg>
+                            </div>
+                            <div data-u="arrowright" class="jssora073 arrowright" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+                                <svg viewBox="0 0 16000 16000" class="svg_viewBox">
+                                    <path class="a" d="M11962.3,8357.3l-5891.8,5891.8c-100.6,100.6-219.7,150.9-357.3,150.9s-256.7-50.3-357.3-150.9 L4037.7,12931c-100.6-100.6-150.9-219.7-150.9-357.3c0-137.6,50.3-256.7,150.9-357.3L8254.1,8000L4037.7,3783.6 c-100.6-100.6-150.9-219.7-150.9-357.3c0-137.6,50.3-256.7,150.9-357.3l1318.1-1318.1c100.6-100.6,219.7-150.9,357.3-150.9 s256.7,50.3,357.3,150.9l5891.8,5891.8c100.6,100.6,150.9,219.7,150.9,357.3C12113.2,8137.6,12062.9,8256.7,11962.3,8357.3 L11962.3,8357.3z"></path>
+                                </svg>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="Div2" class="downloadButton3">
+                        <a href="Files/Portfolio.docx" target="_blank">
+                            <p id="P5" class="downloadButtonText">Загрузить портфолио</p>
+                        </a>
+                    </div>
+                </div>
+                <div id="tabBar1_contDiv3" class="IContent1">
+                    <!--Блог-->
+                    <p>
+                        <a href="iblog.html" target="_blank">Перейти к блогу</a>
+                    </p>
+                </div>
+                <div id="tabBar1_contDiv4" class="IContent1">
+
+
+                    <!-- Статьи-->
+                    <p class="ThesisText">Статьи:</p>
+                    <ul>
+                        <li><a href="st1.html" target="_blank">Перейти к статье 1</a></li>
+                        <li><a href="st2.html" target="_blank">Перейти к статье 2</a> </li>
+                        <li><a href="st3.html" target="_blank">Перейти к статье 3</a></li>
+                        <li><a href="st4.html" target="_blank">Перейти к статье 4</a></li>
+                    </ul>
+                </div>
+                <div id="tabBar1_contDiv5" class="IContent1">
+                    <!--Форум-->
+                    <p>
+                        <a href="http://forum.invoteco.ru/" target="_blank">Перейти к форуму</a>
+                    </p>
+                </div>
+                <div id="tabBar1_contDiv6" class="IContent1">
+
+                    <!--Контакты-->
+                    <p>E-mail:<a href="mailto:pas@invoteco.ru">pas@invoteco.ru</a></p>
+                    <p>
+                        тел.8**********
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="FbLinkBtn" style="background-color: transparent; float: right; height: 39px; width: 39px; margin-right: -37px; margin-top: -900px;">
+            <a href="https://www.facebook.com/invoteco" target="_blank" class="rollover_fb"></a>
+        </div>
+        <div id="TwLinkBtn" style="background-color: transparent; float: right; height: 39px; width: 39px; margin-right: -37px; margin-top: -860px;">
+            <a href="https://twitter.com/INVOTECO" target="_blank" class="rollover_tw"></a>
+        </div>
+        <div id="LinkedInLinkBtn" style="background-color: transparent; float: right; height: 39px; width: 39px; margin-right: -37px; margin-top: -820px;">
+            <a href="https://www.linkedin.com" target="_blank" class="rollover_in"></a>
+        </div>
+
+    </div>
+
+</body>
+</html>

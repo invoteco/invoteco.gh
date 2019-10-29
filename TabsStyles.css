@@ -1,0 +1,362 @@
+﻿ .maindiv
+ {
+    padding: 2px 5px 2px 5px; 
+    height:1040px;/*height с tabBar1 плюс height с tabsDiv1*/
+     /*height:1089px;*//*height с tabBar1 плюс height с tabsDiv1*/
+    /*width:752px; /* width с tabBar1 плюс 2 px*/
+    width:1002px; /* width с tabBar1 плюс 2 px*/
+    margin-top: 50px; 
+    background-color:transparent;
+    position: relative;
+    margin-right:auto; 
+    margin-left:auto;
+    }
+
+.tabBar1 {
+    /*height: 600px;*/
+    height: 1000px;
+    /*width: 750px;*/
+    width: 1000px;/*width: с .ATab1 умножить на N+1, где N-кол-во вкладок*/
+}
+
+.tabsDiv1 {
+    height: 40px;
+    width: 100%;
+}
+
+.LeftIndent1 {
+    float: left;
+    margin: 0;
+    padding: 0;
+    height: 39px;
+    width: 6px;
+    border-bottom: solid 1px black;
+    border-left: none;
+    border-right: none;
+}
+
+.RightIndent1 {
+    height: 39px;
+    float: none;
+    width: inherit;
+    border-bottom: solid 1px black;
+    margin: 0;
+    padding: 0;
+    border-left: none;
+    border-right: none;
+}
+
+.ATab1 {
+    position: relative;
+    float: left;
+    height: 35px;
+    width: 125px;
+    border-left: solid 1px gray;
+    border-top: solid 4px gray;
+    border-right: solid 1px gray;
+    border-bottom: 1px solid white;
+    text-align: center;
+    cursor: pointer;
+    background-color: White;
+    border-radius: 5px 5px 0 0;
+}
+
+.ITab1 {
+    position: relative;
+    float: left;
+    height: 35px;
+    width: 125px;
+    border-left: solid 1px gray;
+    border-top: solid 4px gray;
+    border-right: solid 1px gray;
+    border-bottom: solid 1px black;
+    text-align: center;
+    cursor: pointer;
+    background-color:gray;
+    border-radius: 5px 5px 0 0;
+}
+
+.TabDelimiter {
+    height: 35px;
+    float: left;
+    width: 1px;
+    border-bottom: solid 1px black;
+    border-left: none;
+    border-right: none;
+    border-top: solid 4px transparent;
+}
+
+.AContent1 {
+    position: inherit;
+    display: block;
+    padding: 25px 25px 25px 25px;
+    height:900px;
+    /*overflow: auto;*/
+}
+.ScrolledDiv {
+    position: inherit;
+    display: block;
+    /*padding: 25px 25px 25px 25px;*/
+    /*height:655px;*/
+    height:600px;
+    /*overflow:scroll;*/
+}
+
+.PortDiv {
+    position: inherit;
+    display: block;
+    /*padding: 25px 25px 25px 25px;*/ 
+    height:850px;
+    overflow:auto;
+}
+
+
+.IContent1 {
+    position: inherit;
+    display: none;
+    padding: 25px 25px 25px 25px;
+    /*overflow: scroll;*//**/
+}
+
+.contentfield {
+    height: inherit; 
+    vertical-align: top;
+    width: 998px; /*width с .tabBar1 минус 2px (Чтобы не было разрыва в правом верхнем углу)*/
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+    border-bottom: solid 1px black;
+    background-color: white;
+}
+.ATab1 p  {
+    position: relative;
+    bottom: 20%;
+    color:darkcyan;
+}
+
+.ITab1 p {
+    position: relative;
+    bottom: 20%;
+    color:white;
+} 
+.FotoNameWelcomediv {
+float: left;
+height: 247px;
+width: 100%;
+background-color: aqua;
+}
+  
+.fotodiv {
+float: left;
+height: 247px;
+width: 198px;
+background-color: green;
+}
+
+.namediv {
+float:left;
+height: 150px;
+width:750px;
+background-color: dimgrey;
+}
+
+.welcomediv {
+float:left;
+height: 97px;
+width: 750px; 
+background-color: darkgrey;
+}
+
+.nametext {
+position: relative;
+top: 15%;
+text-align: center;
+color: white;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 30pt;
+}
+
+.welcometext {
+position: relative;
+top: 15%;
+text-align: center;
+color: black;
+font-family: Algerian, Arial, Helvetica, sans-serif;
+font-size: 20pt;
+}
+
+.InformationTesisdiv {
+float: left;
+top: 247px;
+width:100%;
+height: 600px;
+ background-color:brown;
+}
+
+.informationdiv {
+    float: left;
+    height: inherit;
+    width: 198px;
+    background-color: #CCCCCC;
+}
+
+.downloadButton {
+    position: relative;
+    bottom: 32px;
+    height: 32px;
+    width: 150px;
+    background-color: #333333;
+    margin-left: 24px;
+    margin-top: 80px;
+    text-align: center;
+    /**/
+    /*display:block;
+    vertical-align:bottom;*/
+}
+
+    .downloadButton a {
+        display: block; /* Ссылка как блочный элемент */
+        text-align: center; /* Выравнивание по центру */
+        height: 100%; /* Высота на весь слой */
+        color: #666; /* Цвет ссылки */
+    }
+.downloadButton2 {
+position:relative;
+height: 32px;
+width: 150px;
+background-color: #333333;
+ text-align: center;
+ left:770px;
+ top:255px;
+
+}
+.downloadButton2 a {
+    display: block; /* Ссылка как блочный элемент */
+    text-align: center; /* Выравнивание по центру */
+    height: 100%; /* Высота на весь слой */
+    color: #666; /* Цвет ссылки */
+}
+.downloadButton3 {
+position:relative;
+height: 32px;
+width: 150px;
+background-color: #333333;
+ text-align: center;
+ left:770px;
+ /*top:-10px;*/
+
+}
+.downloadButton3 a {
+    display: block; /* Ссылка как блочный элемент */
+    text-align: center; /* Выравнивание по центру */
+    height: 100%; /* Высота на весь слой */
+    color: #666; /* Цвет ссылки */
+}
+
+.downloadButtonText {
+    position: relative;
+    color: white;
+    top: 22%;/*15*/
+    font-size:small;
+
+}
+
+.Tesisdiv {
+float: left;
+height: inherit;
+width: 750px;
+background-color: #f6f6f6;
+}
+
+.TextDiv { 
+    padding:5px 5px 5px 5px;
+}
+
+
+.footerDiv {
+float: left;
+top: 600px;
+width:100%;
+height: 100px;
+background-color:gray;
+
+}
+.footertext {
+position: relative;
+top: 50%;
+text-align: center;
+color: white;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 12pt;
+}
+
+.ThesisText {
+text-indent: 20px; /* Отступ первой строки в пикселах */
+padding:15px 15px 15px 15px;
+}
+
+.experienceFrame { 
+    width:100%;
+}
+
+/*==================================================
+ * Effect 2 (Тень снизу)
+ * ===============================================*/
+.effect2
+{
+  position: relative;
+}
+.effect2:before, .effect2:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 15px;
+  width: 50%;
+  top: 80%;
+  max-width:500px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.effect2:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 15px;
+  left: auto;
+}
+
+
+ul.hr {
+    margin: 0; /* Обнуляем значение отступов */
+    padding: 2px; /* Значение полей */
+   }
+ul.hr li {
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 2px; /* Отступ слева */
+    padding: 3px; /* Поля вокруг текста */
+    font-size:smaller;
+}
+/*Кнопка как ссылка*/
+  .btnref {
+    border: 1px solid #333; /* Рамка */
+    display: inline-block;
+    padding: 5px 15px; /* Поля */
+    text-decoration: none; /* Убираем подчёркивание */
+    color: #000; /* Цвет текста */
+  }
+   .btnref:hover {
+    box-shadow: 0 0 5px rgba(0,0,0,0.3); /* Тень */
+    background: linear-gradient(to bottom, #fcfff4, #e9e9ce); /* Градиент */
+    color: #a00;
+   }
