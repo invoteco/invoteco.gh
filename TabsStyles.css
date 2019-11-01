@@ -75,7 +75,9 @@
         background-color: #D3D3D3;
         text-decoration:underline;
         text-decoration-color:white;  
-        border-top: solid 4px #D3D3D3;    
+        border-top: solid 4px #D3D3D3;
+        border-left: solid 1px #D3D3D3;
+        border-right: solid 1px #D3D3D3;     
     } 
 
 .TabDelimiter {
