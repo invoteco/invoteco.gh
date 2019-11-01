@@ -71,6 +71,13 @@
     border-radius: 5px 5px 0 0;
 }
 
+    .ITab1:hover {
+        background-color: #D3D3D3;
+        text-decoration:underline;
+        text-decoration-color:white;  
+        border-top: solid 4px #D3D3D3;    
+    } 
+
 .TabDelimiter {
     height: 35px;
     float: left;
